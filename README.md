@@ -5,4 +5,4 @@ Exemplos de consultas completas estão no arquivo Exemplos.sql que podem ser enc
 
 ### Todas as informações utilizadas no banco de dados são ficticias.
 
-### Arquivos criados com o auxilio dos cursos da Alura
+### Arquivos criados com o auxilio dos cursos da [Alura](https://alura.com.br)
