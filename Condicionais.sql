@@ -47,13 +47,19 @@ SELECT * FROM [TABELA DE PRODUTOS] WHERE [SABOR] IN ('Manga', 'Laranja') AND [PR
 
 
 SELECT * FROM [TABELA DE PRODUTOS] WHERE [NOME DO PRODUTO] LIKE '%Litros%'
-
+--Has in any position
 SELECT * FROM [TABELA DE PRODUTOS] WHERE [SABOR] LIKE '%Cereja%'
-
+-- Start with
 SELECT * FROM [TABELA DE PRODUTOS] WHERE [NOME DO PRODUTO] LIKE 'Litros%'
-
+-- Finish with
 SELECT * FROM [TABELA DE PRODUTOS] WHERE [SABOR] LIKE '%Cereja'
  OR [SABOR] = 'Laranja'
+ /*
+WHERE CustomerName LIKE '_r%'	Finds any values that have "r" in the second position
+WHERE CustomerName LIKE 'a_%'	Finds any values that start with "a" and are at least 2 characters in length
+WHERE CustomerName LIKE 'a__%'	Finds any values that start with "a" and are at least 3 characters in length
+WHERE ContactName LIKE 'a%o'	Finds any values that start with "a" and ends with "o"
+*/
 
 SELECT DISTINCT SABOR FROM [TABELA DE PRODUTOS]
 
