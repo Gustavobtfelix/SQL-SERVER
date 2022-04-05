@@ -23,5 +23,24 @@ RETURN @ALEATORIO
 END
 -- GERA UM NUMERO ALEATORIO ENTRE X E Y
 SELECT [dbo].[NumeroAleatorio](0,1000)
+--		//				//				//				//				//			
+-- Inserindo valores aleatorios em uma tabela com primary key
+DECLARE @TABELA TABLE (NUMERO INT UNIQUE)
+DECLARE @CONTADOR INT
+DECLARE @CONTMAXIMO INT
+SET @CONTADOR = 1
+SET @CONTMAXIMO = 100
+WHILE @CONTADOR <= @CONTMAXIMO
+BEGIN
+	BEGIN TRY
+		INSERT INTO @TABELA (NUMERO) VALUES 
+			([dbo].[NumeroAleatorio](0,1000))
+		SET @CONTADOR += 1
+	END TRY
+	BEGIN CATCH
+	PRINT('ERRO')
+	END CATCH
+END
+SELECT * FROM @TABELA ORDER BY 1
 
-
+--		//				//				//				//				//			
