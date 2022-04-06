@@ -6,7 +6,7 @@ Exemplos de consultas completas estão no arquivo Exemplos.sql que podem ser enc
 # TSQL-SERVER
 Para utilizar as consultas em TSQL importe o banco SUCOS_VENDAS.BAK na pasta TRIGGERS
 
-Exemplo de consultas avançadas com TSQL podem ser vistos no arquivo TRIGGERS/Adicionando valores aleatorios. ou na release Exemplos2
+Exemplo de consultas avançadas com TSQL podem ser vistos no arquivo TRIGGERS/Adicionando valores aleatorios.
 
 ### Todas as informações utilizadas no banco de dados são ficticias.
 
