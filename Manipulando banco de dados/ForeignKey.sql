@@ -1,6 +1,6 @@
 /* Foreign key
-relação 1 para n
-também pode ser feito de modo interativo  atravês dos diagramas
+relatorio 1 para n
+tambem pode ser feito de modo interativo  atraves dos diagramas
 */
 ALTER TABLE [NOTAS] WITH CHECK ADD CONSTRAINT [FK_NOTAS_CLIENTES]
 FOREIGN KEY([CPF]) REFERENCES [CLIENTES] ([CPF])
