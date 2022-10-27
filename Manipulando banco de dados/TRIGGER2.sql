@@ -25,8 +25,9 @@ insert into t1 values (1,2,3,4)
 
 update t1 set c1 = 4 where id = 3
 
+--Trigger usado para gerar log
 
-
+--tabela a ser monitorada
 CREATE TABLE welcome (
     id int IDENTITY(1,1) NOT NULL,
     nome nvarchar(250),
@@ -34,10 +35,32 @@ CREATE TABLE welcome (
 	cracha_impresso int,
 );
 
+--tabela de LOG
+
+CREATE TABLE [dbo].[registrosImpressoes](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[dt_server] [datetime] NULL,
+	[origin] [nvarchar] (50) NULL,
+	[usuario] [nvarchar](250) NULL,
+	[Command] [nvarchar](8) NOT NULL,
+	[cpf] [nvarchar](14) NULL,
+	[OldRowData] nvarchar(1000) CHECK(ISJSON(OldRowData) = 1),
+    [NewRowData] nvarchar(1000) CHECK(ISJSON(NewRowData) = 1),
+	
+	
+ CONSTRAINT [PK_registrosImpressoes] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+
+
 INSERT INTO welcome 
 		(nome, cpf, cracha_impresso) 
 	values
 		( 'E', 'CPF', 0)
+
+
 select * from welcome
 select * from registrosImpressoes
 
