@@ -47,12 +47,6 @@ CREATE TABLE [dbo].[registrosImpressoes](
 	[OldRowData] nvarchar(1000) CHECK(ISJSON(OldRowData) = 1),
     [NewRowData] nvarchar(1000) CHECK(ISJSON(NewRowData) = 1),
 	
-	
- CONSTRAINT [PK_registrosImpressoes] PRIMARY KEY CLUSTERED 
-(
-	[id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
 
 
 INSERT INTO welcome 
