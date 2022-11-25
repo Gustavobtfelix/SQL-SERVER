@@ -32,5 +32,5 @@ FROM sys.databases
 WHERE name = N'Credit_CDCKeep';
 GO
 
- 
+ --all that is nedeed later is to call sp_cdc_add_job
 
