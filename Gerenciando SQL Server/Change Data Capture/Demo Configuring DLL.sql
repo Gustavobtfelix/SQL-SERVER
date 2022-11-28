@@ -7,7 +7,7 @@ EXECUTE sys.sp_cdc_disable_table
 
 -- Now we can modify the table as needed
 ALTER TABLE dbo.Charge
-ADD AuditUser SYSNANE;
+ADD AuditUser SYSNAME;
 GO
 
 -- Look at the dbo_charge tracking table - nothing changed
