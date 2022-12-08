@@ -13,7 +13,7 @@ SELECT *
 FROM cdc.dbo_welcome_CT;
 GO
 
--- Load some example charges
+-- Load some example charges | add new values to table
 EXECUTE dbo.load_charges @target_charge_count = 2;
 GO
 
